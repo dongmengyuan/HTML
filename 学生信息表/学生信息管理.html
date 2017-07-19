@@ -1,0 +1,136 @@
+<ef!DOCTYPE html>
+<html>
+    <meta charset = "utf-8">
+    <head>
+        <title>学生信息管理</title>
+    </head>
+
+        <style>
+            #footer {
+                background-color:white;
+                color:black;
+                text-align:center;
+                padding:5px;
+            }
+        </style>
+
+    <body>
+        <col style="width:60%" />
+        <table border="0" style="table-layout:filed">
+            <tr>
+                <td colspan="2" >
+                    <img src = "img/haha.jpg" width = "1300" height="150">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <b>菜单</b><br>
+                   <ul type="disk">
+                      <li><a href="http://www.baidu.com">导入学生信息</a></li>
+                      <li><a href="http://www.baidu.com">查询学生信息</a></li>
+                      <li><a href="http://www.baidu.com">修改学生信息</a></li>
+                      <li><a href="http://www.baidu.com">导出学生信息</a></li>
+                   </ul>
+                </td>
+                
+                <td>
+                <!--form表单-->
+		        <form>
+                    查询条件: 
+                    学院
+                    <select>
+                        <option></option>
+                        <option>西安邮电大学计算机学院</option>
+                        <option></option>
+                    </select>
+                    班级
+                    <input type="text" name = "班级" id="banji">
+                    姓名
+                    <input type="text" name = "姓名" id="name">
+                    学号
+                    <input type="text" name = "学号" id="username">
+                    <button id="btn">查询</button>
+		        </form>
+
+                    <br>
+                    <br>
+                    <br>
+                    <center>学生名单</center>
+                    <br>        
+                    <table  border="1" width="100%" height =  "230">
+            <tr>
+                <td width="250px" >学院</td>
+                <td width="250px" >班级</td>
+                <td width="250px" >姓名</td>
+                <td width="250px" >学号</td>
+            </tr>
+            <tr>
+                <td>计算机学院</td>
+                <td>软件1606</td>
+                <td>张三</td>
+                <td>001</td>
+            </tr>
+            <tr>
+                <td>计算机学院</td>
+                <td>软件1606</td>
+                <td>李四</td>
+                <td>002</td>
+            </tr>
+            <tr>
+                <td>计算机学院</td>
+                <td>软件1606</td>
+                <td>王五</td>
+                <td>003</td>
+            </tr>
+        
+            </table>
+            <br>
+        
+       <center>
+           前一页1
+           <a href="http://www.baidu.com" target = "_blank">2</a>
+           <a href="http://www.baidu.com" target = "_blank">3</a>
+           <a href="http://www.baidu.com" target = "_blank">4</a>
+           <a href="http://www.baidu.com" target = "_blank">5</a>
+           <a href="http://www.baidu.com" target = "_blank">6</a>
+           <a href="http://www.baidu.com" target = "_blank">7</a>
+           <a href="http://www.baidu.com" target = "_blank">8</a>   
+           <a href="http://www.baidu.com" target = "_blank">后一页</a>
+       </center>
+       <br>
+       <br>
+       </td>
+      </table>
+
+        
+        <div id = "footer">copyright@2017</div>
+
+    </body>
+
+    <!--表单验证-->
+	<script>
+		document.getElementById("btn").addEventListener("click",function() {
+
+			var username = document.getElementById("username").value;
+			var name = document.getElementById("name").value;
+			var banji = document.getElementById("banji").value;
+
+            if(username.charAt(1) != '1')
+                alert("错误");  
+
+			if(username[0] != '0' || username.length!=8 )
+				alert("学号不符合要求");
+
+			else if(name.length == 0 || name.length>10)
+				alert("名字长度不符合要求");
+
+			else if(banji.length == 0 || banji.length>10)
+				alert("班级名称不符合要求");
+
+			else
+				alert("查询成功");
+		})
+		
+	</script>
+</html>
+
